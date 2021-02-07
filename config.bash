@@ -16,17 +16,20 @@ PAD_NAME="Tablet Monitor Pad pad"
 ID_MOUSE=`xinput | grep "G305.*pointer" | cut -f 2 | cut -c 4-5`
 ID_STYLUS=`xinput | grep "stylus" | cut -f 2 | cut -c 4-5`
 
+# Uses The pi menu addon for blender
+
+
+
 xsetwacom --set "$PAD_NAME" Button 1 "key +ctrl +z -z -ctrl"
-xsetwacom --set "$PAD_NAME" Button 2 "key e"
+xsetwacom --set "$PAD_NAME" Button 2 "key +alt +q -alt -q"
 xsetwacom --set "$PAD_NAME" Button 3 "key f"
 
 xsetwacom --set "$PAD_NAME" Button 8 "key shift"
 xsetwacom --set "$PAD_NAME" Button 9 "key ctrl"
 
-xsetwacom --set "$PAD_NAME" Button 10 "key x"
-xsetwacom --set "$PAD_NAME" Button 11 "key y"
-xsetwacom --set "$PAD_NAME" Button 12 "key z"
+xsetwacom --set "$PAD_NAME" Button 10 "key +ctrl +tab -ctrl -tab"
+xsetwacom --set "$PAD_NAME" Button 11 "key +alt +space -alt -space"
+xsetwacom --set "$PAD_NAME" Button 12 "key +ctrl +shift +z -z -shift -ctrl"
 
 # Fix the monitors for mouse and stylus
 xinput map-to-output $ID_STYLUS $MONITOR
-xinput map-to-output $ID_MOUSE $MONITOR_MAIN
