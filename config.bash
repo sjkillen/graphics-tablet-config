@@ -21,7 +21,7 @@ ID_STYLUS=`xinput | grep "stylus" | cut -f 2 | cut -c 4-5`
 
 
 xsetwacom --set "$PAD_NAME" Button 1 "key +ctrl +z -z -ctrl"
-xsetwacom --set "$PAD_NAME" Button 2 "key +alt +q -alt -q"
+xsetwacom --set "$PAD_NAME" Button 2 "key +space"
 xsetwacom --set "$PAD_NAME" Button 3 "key f"
 
 xsetwacom --set "$PAD_NAME" Button 8 "key shift"
